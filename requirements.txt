@@ -1,3 +1,2 @@
-streamlit
-pyttsx3
-gTTS
+pyttsx3==2.99
+streamlit==1.49.1
