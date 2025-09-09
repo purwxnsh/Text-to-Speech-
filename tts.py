@@ -1,10 +1,20 @@
-import pyttsx3 
-import streamlit as s
-engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
-engine.setProperty('voice',voices[1].id)
-engine.setProperty('rate',70)
-user_input = s.text_input("enter anything")
-if s.button('submit'):
- engine.say(user_input)
- engine.runAndWait()
+import streamlit as st
+from gtts import gTTS
+import os
+
+st.title("Text to Speech App 🎤")
+
+user_input = st.text_input("Enter anything:")
+
+if st.button("Submit"):
+    if user_input.strip() != "":
+        tts = gTTS(user_input, lang='en')
+        tts.save("speech.mp3")
+
+        # Play audio in browser
+        audio_file = open("speech.mp3", "rb")
+        audio_bytes = audio_file.read()
+        st.audio(audio_bytes, format="audio/mp3")
+
+    else:
+        st.warning("Please enter some text!")
