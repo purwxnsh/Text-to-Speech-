@@ -60,7 +60,7 @@ st.markdown(
 
 # ----------------- Text Input -----------------
 st.markdown("### ✍️ Enter Text")
-user_input = st.text_area("Type here:", placeholder="Select pyttsx3 (Offline) to select Male or Female voice with adjustable voice speed")
+user_input = st.text_area("Type here:", placeholder="Enter You Text : For Example - Hi, My name is Purav")
 
 # ----------------- Language Selection -----------------
 language = st.selectbox("🌍 Select Language", [
@@ -72,7 +72,7 @@ language = st.selectbox("🌍 Select Language", [
 ], format_func=lambda x: x[0])
 
 # ----------------- Engine Selection -----------------
-engine_choice = st.radio("🎤 Voice Engine", ["gTTS (Google, Online)", "pyttsx3 (Offline)"])
+engine_choice = st.radio("🎤 Voice Engine", ["gTTS (Google, Online)", "pyttsx3 (Offline - Allows Audio Customization)"])
 
 # ----------------- pyttsx3 Options -----------------
 if engine_choice == "pyttsx3 (Offline)":
@@ -153,5 +153,6 @@ st.markdown("""
     <span class="glow-red">PURWANSH CHAUDHARY</span> | Made with ❤️ in Python & Streamlit
 </div>
 """, unsafe_allow_html=True)
+
 
 
