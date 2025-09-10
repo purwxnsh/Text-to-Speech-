@@ -24,10 +24,9 @@ if st.button("Submit"):
         tts.save("speech.mp3")
 
         # Play audio in browser
-        audio_file = open("speech.mp3", "rb")
-        audio_bytes = audio_file.read()
-        st.audio(audio_bytes, format="audio/mp3")
-
+        with open("speech.mp3", "rb") as audio_file:
+            audio_bytes = audio_file.read()
+            st.audio(audio_bytes, format="audio/mp3")
     else:
         st.warning("Please enter some text!")
 
@@ -55,3 +54,8 @@ st.markdown(
     <div class="footer">
         © 2025 Text to Speech Converter Project | Design by 
         <span class="glow">PURWANSH CHAUDHARY</span> | Made with ❤️ in Python & Streamlit
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
