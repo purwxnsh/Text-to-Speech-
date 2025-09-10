@@ -5,10 +5,10 @@ import os
 # ----------------- Custom Heading -----------------
 st.markdown(
     """
-    <h1 style='color: red; text-align: center;'>
+    <h1 style='color: red; text-align: center; margin-bottom: 5px;'>
         TEXT TO SPEECH 🎙️
     </h1>
-    <p style='text-align: center; font-size: 12px; color: rgba(0,0,0,0.6);'>
+    <p style='text-align: center; font-size: 12px; color: rgba(255,255,255,0.7); margin-top: -10px;'>
         Made by <b>PURWANSH CHAUDHARY</b>
     </p>
     """,
@@ -44,7 +44,7 @@ st.markdown(
         font-size: 12px;
         color: rgba(0,0,0,0.6);
         padding: 10px;
-        background: white;
+        background: transparent; /* Transparent background */
     }
     .glow {
         color: red;
@@ -55,8 +55,3 @@ st.markdown(
     <div class="footer">
         © 2025 Text to Speech Converter Project | Design by 
         <span class="glow">PURWANSH CHAUDHARY</span> | Made with ❤️ in Python & Streamlit
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
