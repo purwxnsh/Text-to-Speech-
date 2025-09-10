@@ -17,9 +17,9 @@ header_html = (
 st.markdown(header_html, unsafe_allow_html=True)
 
 # Input
-user_input = st.text_input("Enter anything:")
+user_input = st.text_input("Type anything:")
 
-if st.button("Submit"):
+if st.button("CONVERT"):
     if user_input.strip():
         tts = gTTS(user_input, lang='en')
         # save to a temporary file (avoids permission issues)
@@ -78,6 +78,7 @@ footer_html = (
 )
 
 st.markdown(css + footer_html, unsafe_allow_html=True)
+
 
 
 
