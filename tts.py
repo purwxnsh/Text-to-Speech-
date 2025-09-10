@@ -8,7 +8,7 @@ st.set_page_config(page_title="Text to Speech", layout="centered")
 # Header HTML (Made by is white, slightly moved up, slightly transparent)
 header_html = (
     "<h1 style='color: #FFB13B; text-align: center; margin-bottom: 5px;'>"
-    "TEXT TO SPEECH 🎙️"
+    "🎙️TEXT TO SPEECH🎙️"
     "</h1>"
     "<p style='text-align: center; font-size: 12px; color: rgba(255,255,255,0.75); margin-top: -10px;'>"
     "Made by <b>PURWANSH CHAUDHARY</b>"
@@ -78,6 +78,7 @@ footer_html = (
 )
 
 st.markdown(css + footer_html, unsafe_allow_html=True)
+
 
 
 
