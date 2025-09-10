@@ -52,7 +52,7 @@ st.markdown("""
 
 # ----------------- Header -----------------
 st.markdown(
-    "<h1 style='color: red; text-align: center; margin-bottom: 5px;'>TEXT TO SPEECH 🎙️</h1>"
+    "<h1 style='color: #FABB3C; text-align: center; margin-bottom: 5px;'>🎙️TEXT TO SPEECH🎙️</h1>"
     "<p style='text-align: center; font-size: 12px; color: rgba(255,255,255,0.7); margin-top: -10px;'>"
     "Made by <span class='glow'>PURWANSH CHAUDHARY</span></p>",
     unsafe_allow_html=True
@@ -60,7 +60,7 @@ st.markdown(
 
 # ----------------- Options -----------------
 st.markdown("### ✍️ Enter Text")
-user_input = st.text_area("Type here:", placeholder="Example: **Hello** _World_ 😃")
+user_input = st.text_area("Type here:", placeholder="Example: Hi, My name is Purav")
 
 language = st.selectbox("🌍 Select Language", [
     ("English", "en"), 
@@ -130,3 +130,30 @@ if st.button("🔊 Convert to Speech"):
             pass
     else:
         st.warning("Please enter some text!")
+# ----------------- Footer -----------------
+st.markdown("""
+    <style>
+    .footer {
+        text-align: center;
+        font-size: 12px;
+        color: white;
+        margin-top: 50px;
+        opacity: 0.8;
+    }
+    .glow-red {
+        color: red;
+        font-weight: bold;
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+        from { text-shadow: 0 0 5px red; }
+        to { text-shadow: 0 0 20px red, 0 0 30px crimson; }
+    }
+    </style>
+    <div class="footer">
+        © 2025 Text to Speech Converter Project | Design by 
+        <span class="glow-red">PURWANSH CHAUDHARY</span> | Made with ❤️ in Python & Streamlit
+    </div>
+""", unsafe_allow_html=True)
+
+
