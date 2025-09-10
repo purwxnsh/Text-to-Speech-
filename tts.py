@@ -10,7 +10,11 @@ header_html = (
     "<h1 style='color: red; text-align: center; margin-bottom: 5px;'>"
     "TEXT TO SPEECH 🎙️"
     "</h1>"
-   
+    "<p style='text-align: center; font-size: 12px; color: rgba(255,255,255,0.75); margin-top: -10px;'>"
+    "Made by <b>PURWANSH CHAUDHARY</b>"
+    "</p>"
+)
+st.markdown(header_html, unsafe_allow_html=True)
 
 # Input
 user_input = st.text_input("Enter anything:")
@@ -74,4 +78,5 @@ footer_html = (
 )
 
 st.markdown(css + footer_html, unsafe_allow_html=True)
+
 
