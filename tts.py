@@ -41,21 +41,18 @@ st.markdown(
         width: 100%;
         text-align: center;
         font-size: 12px;
-        color: rgba(0,0,0,0.6);
+        color: white; /* Footer text white */
         padding: 10px;
-        background: transparent; /* Transparent background */
+        background: transparent;
     }
     .glow {
         color: red;
-        text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px darkred;
         font-weight: bold;
+        animation: breathing 3s ease-in-out infinite;
+    }
+    @keyframes breathing {
+        0% { text-shadow: 0 0 5px red, 0 0 10px darkred; }
+        50% { text-shadow: 0 0 20px red, 0 0 40px darkred; }
+        100% { text-shadow: 0 0 5px red, 0 0 10px darkred; }
     }
     </style>
-    <div class="footer">
-        © 2025 Text to Speech Converter Project | Design by 
-        <span class="glow">PURWANSH CHAUDHARY</span> | Made with ❤️ in Python & Streamlit
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
