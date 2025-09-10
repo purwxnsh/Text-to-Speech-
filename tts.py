@@ -75,7 +75,7 @@ language = st.selectbox("🌍 Select Language", [
 engine_choice = st.radio("🎤 Voice Engine", ["gTTS (Google, Online)", "pyttsx3 (Offline - Allows Audio Customization)"])
 
 # ----------------- pyttsx3 Options -----------------
-if engine_choice == "pyttsx3 (Offline)":
+if engine_choice == "pyttsx3 (Offline - Allows Audio Customization)":
     st.markdown("### 🎛️ Voice Settings")
     gender = st.radio("Select Voice Type:", ["Male", "Female"])
     speed = st.slider("Adjust Speech Speed:", min_value=50, max_value=300, value=150, step=10)
@@ -153,6 +153,7 @@ st.markdown("""
     <span class="glow-red">PURWANSH CHAUDHARY</span> | Made with ❤️ in Python & Streamlit
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
