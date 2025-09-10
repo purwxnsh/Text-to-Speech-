@@ -60,7 +60,7 @@ st.markdown(
 
 # ----------------- Text Input -----------------
 st.markdown("### ✍️ Enter Text")
-user_input = st.text_area("Type here:", placeholder="Enter You Text : For Example - Hi, My name is Purav")
+user_input = st.text_area("Type here:", placeholder="Enter  Your  Text  :  For Example  -  Hi, My name is Purav")
 
 # ----------------- Language Selection -----------------
 language = st.selectbox("🌍 Select Language", [
@@ -153,6 +153,7 @@ st.markdown("""
     <span class="glow-red">PURWANSH CHAUDHARY</span> | Made with ❤️ in Python & Streamlit
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
